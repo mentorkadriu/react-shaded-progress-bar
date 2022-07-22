@@ -1,0 +1,30 @@
+{
+  "name": "react-shaded-progress-bar",
+  "version": "1.0.6",
+  "description": "",
+  "source": "./index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "rm -rf .cache/ && rm -rf dist/ && parcel index.html --open",
+    "build": "rm -rf .cache/ && rm -rf dist/ && parcel build index.ts"
+  },
+  "keywords": [],
+  "author": "Mentor Kadriu",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "prettier": "2.7.1",
+    "sass": "^1.53.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
