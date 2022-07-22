@@ -1,26 +1,42 @@
 {
   "name": "react-shaded-progress-bar",
-  "version": "1.0.6",
-  "description": "",
+  "version": "1.2.3",
+  "description": "A react component",
   "source": "./index.ts",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "rm -rf .cache/ && rm -rf dist/ && parcel index.html --open",
-    "build": "rm -rf .cache/ && rm -rf dist/ && parcel build index.ts"
+    "start": "npm run clean:component && npx parcel index.html --open",
+    "build:component": "npm run clean:component && npx parcel build index.ts --no-source-maps",
+    "build:docs": "npm run clean:docs && npx parcel build index.html --public-url ./ --dist-dir docs --no-source-maps",
+    "check": "tsc --noEmit",
+    "clean:component": "rm -rf .parcel-cache/ && rm -rf dist/",
+    "clean:docs": "rm -rf .parcel-cache/ && rm -rf docs/"
   },
-  "keywords": [],
+  "keywords": [
+    "shaded",
+    "progress",
+    "bar",
+    "react",
+    "component"
+  ],
   "author": "Mentor Kadriu",
   "license": "ISC",
   "dependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "@parcel/packager-ts": "^2.6.2",
+    "@parcel/transformer-sass": "^2.6.2",
+    "@parcel/transformer-typescript-tsc": "^2.6.2",
+    "@parcel/transformer-typescript-types": "^2.6.2",
+    "parcel": "^2.6.2",
     "prettier": "2.7.1",
+    "process": "^0.11.10",
     "sass": "^1.53.0",
     "typescript": "^4.7.4"
   },

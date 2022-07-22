@@ -1,5 +1,4 @@
 @import "settings";
-//@import 'compass/css3';
 
 @function set-positive($number) {
   $result: $number * $number;
@@ -16,28 +15,6 @@
   }
 }
 
-.flexy-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 4em 0;
-  .flexy-column {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin-bottom: 3em;
-    .flexy-item {
-      flex: 1;
-    }
-  }
-  &:nth-of-type(odd) {
-    background-color: #d8dbe4;
-  }
-  input[type="checkbox"] {
-    display: none;
-  }
-}
 
 .value-label {
   position: relative;

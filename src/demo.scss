@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #444444;
+}
+.header {
+  text-align: center;
+}
+.h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.flexy-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4em 0;
+  width: 100%;
+  .flexy-column {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 3em;
+    .flexy-item {
+      flex: 1;
+    }
+  }
+  &:nth-of-type(odd) {
+    background-color: #d8dbe4;
+  }
+}
+
+.playground {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 20px 0;
+  align-items: baseline;
+}

@@ -1,0 +1,40 @@
+//@import "settings";
+
+@mixin build-skin($color, $name) {
+  &.#{$name} {
+    .bar-face,
+    &[aria-valuenow="0"] .face-position.right {
+      background-color: $faces-color;
+    }
+    .face-position.left,
+    &[aria-valuenow="100"] .face-position.right {
+      background-color: rgba($color, 0.2);
+    }
+    &[aria-valuenow="100"] .face-position.right {
+      transition-delay: $sides-transition-duration;
+    }
+    .face-position.floor.volume-lights {
+      box-shadow: 0 -0.2em 1em rgba(0, 0, 0, 0.15),
+      0 0.2em 0.1em -5px rgba(0, 0, 0, 0.3),
+      0 -0.75em 1.75em rgba($white, 0.6);
+    }
+    .percentage:before {
+      background-color: rgba($color, 0.5);
+    }
+    .volume-lights.shine:before {
+      box-shadow: 0 1.6em 3em rgba($color, 0.25);
+    }
+
+    &:not(.has-colors) {
+      &[aria-valuenow] .face-position {
+        background-color: rgba($dark, 0.6);
+      }
+      .percentage:before {
+        background-color: transparent;
+      }
+      .volume-lights.shine:before {
+        box-shadow: 0 1.6em 3em rgba($color, 0);
+      }
+    }
+  }
+}

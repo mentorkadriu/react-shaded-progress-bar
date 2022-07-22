@@ -1,0 +1,8 @@
+@import "scss/settings";
+@import "scss/build-skin";
+
+$green: #00ff00;
+
+.bar {
+  @include build-skin($green, "custom");
+}

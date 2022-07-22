@@ -1,12 +1,10 @@
-import * as React from "react";
+import React from "react";
 import "../style.scss";
-import { ShadedProgressBarProps } from "../types";
+import { ShadedProgressBarProps } from "./ShadedProgressBar.types";
 
 export default function ShadedProgressBar({
   value = 50,
-  minValue = 0,
-  maxValue = 100,
-  variant = "ruler",
+  variant = "default",
   color = "orange",
   onChange,
 }: ShadedProgressBarProps) {
@@ -18,11 +16,11 @@ export default function ShadedProgressBar({
     <div className="progress-factor flexy-item">
       <div className="progress-bar">
         <div
-          className={`bar has-rotation has-colors ${color} ${variant} `}
+          className={`bar has-rotation has-colors ${color} ${variant}`}
           role="progressbar"
           aria-valuenow={value}
-          aria-valuemin={minValue}
-          aria-valuemax={maxValue}
+          aria-valuemin={1}
+          aria-valuemax={100}
         >
           <div className="tooltip white" />
           <div className="bar-face face-position roof percentage" />

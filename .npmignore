@@ -1,2 +1,7 @@
 .cache
 .idea
+.prettierignore
+.prettierrc.json
+index.tsx
+.parcelrc
+tsconfig.json
