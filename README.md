@@ -4,7 +4,7 @@ A React component inspired from codedrops articles and `https://github.com/codro
 
 ## Installation
 
-`npm install @mentorkadriu/shaded-progress-bar`
+`npm install react-shaded-progress-bar`
 
 ## Adding custom colors
 
