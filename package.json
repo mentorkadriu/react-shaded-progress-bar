@@ -26,6 +26,7 @@
     "type": "git",
     "url": "https://github.com/mentorkadriu/react-shaded-progress-bar"
   },
+  "homepage": "https://mentorkadriu.github.io/react-shaded-progress-bar",
   "license": "ISC",
   "dependencies": {
     "@types/react": "^18.0.15",
